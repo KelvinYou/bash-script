@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# shutdown server
 mqpospayment_log_file=../MQPOSPAYMENT.log
 request_code=0210
+hlh_log_file="../../hlh/hlh.log"
+hlh2_log_file="../../hlh2/hlh.log"
+merchant_sync_log_file="../../merchant-sync/merchant-sync.log"
 
 if [ ! -f "$mqpospayment_log_file" ]; then
   echo "Log file not found: $mqpospayment_log_file"
@@ -15,7 +19,6 @@ while true; do
     de39_line=$(awk -v de0_line_num="$de0_line_number" 'NR > de0_line_num && /DE39:/ {print $0; exit}' "$mqpospayment_log_file")
     
     echo "last_de0_line: $last_de0_line"
-    echo "de0_line_number: $de0_line_number"
     echo "de39_line: $de39_line"
     
     if [[ -n $de39_line ]]; then
@@ -47,62 +50,30 @@ while true; do
   fi
 done
 
+# shutdown hlh, hlh2 and merchant sync
+check_log_file() {
+  local log_file="$1"
+  local search_string="$2"
 
-hlh_log_file="../../hlh/hlh.log"
-
-if [ ! -f "$hlh_log_file" ]; then
-  echo "Log file not found: $hlh_log_file"
-  exit 1
-fi
-
-while true; do
-  last_line=$(tail -n 1 "$hlh_log_file")
-
-  echo "last_line: $last_line"
-
-  if echo "$last_line" | grep -q "Summary"; then
-    break
+  if [ ! -f "$log_file" ]; then
+    echo "Log file not found: $log_file"
+    exit 1
   fi
 
-  sleep 2
-done
+  while true; do
+    last_line=$(tail -n 1 "$log_file")
 
+    echo "last_line: $last_line"
 
-hlh2_log_file="../../hlh2/hlh.log"
+    if echo "$last_line" | grep -q "$search_string"; then
+      echo "Shut down $log_file"
+      break
+    fi
 
-if [ ! -f "$hlh2_log_file" ]; then
-  echo "Log file not found: $hlh2_log_file"
-  exit 1
-fi
+    sleep 2
+  done
+}
 
-while true; do
-  last_line=$(tail -n 1 "$hlh2_log_file")
-
-  echo "last_line: $last_line"
-
-  if echo "$last_line" | grep -q "Summary"; then
-    break
-  fi
-
-  sleep 2
-done
-
-
-merchant_sync_log_file="../../merchant-sync/merchant-sync.log"
-
-if [ ! -f "$merchant_sync_log_file" ]; then
-  echo "Log file not found: $merchant_sync_log_file"
-  exit 1
-fi
-
-while true; do
-  last_line=$(tail -n 1 "$merchant_sync_log_file")
-
-  echo "last_line: $last_line"
-
-  if echo "$last_line" | grep -q "Current depth: 0"; then
-    break
-  fi
-
-  sleep 2
-done
+check_log_file "$hlh_log_file" "Summary"
+check_log_file "$hlh2_log_file" "Summary"
+check_log_file "$merchant_sync_log_file" "Current depth: 0"
