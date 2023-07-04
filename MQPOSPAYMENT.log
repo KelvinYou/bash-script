@@ -1,0 +1,73 @@
+2023-07-03 10:30:08,313 INFO [mQPOSContext-11] [CardworksPayment.java:1888] DE0: 0210
+2023-07-03 10:30:08,313 INFO [mQPOSContext-11] [CardworksPayment.java:1889] DE2: null
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1890] DE3: 280000
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1891] DE4: 000000000100
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1892] DE11: 106899
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1893] DE14: null
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1894] DE22: null
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1895] DE23: null
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1896] DE25: null
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1897] DE37: 318410106822
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1898] DE38:
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1899] DE39: 98
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1900] DE41: 20003788
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1901] DE42: null
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1902] DE54:
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1903] DE55: null
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1904] DE60: 0901
+2023-07-03 10:30:08,314 INFO [mQPOSContext-11] [CardworksPayment.java:1905] DE62: 20230703103008243219
+2023-07-03 10:30:08,328 INFO [mQPOSContext-11] [CardworksPayment.java:465] DE39: 98
+2023-07-03 10:30:08,328 ERROR [mQPOSContext-11] [CardworksPayment.java:476] Update Response: PAN is empty...
+2023-07-03 10:30:08,328 INFO [mQPOSContext-11] [CardworksPayment.java:505] RRN (DE37): 318410106822
+2023-07-03 10:30:08,328 INFO [mQPOSContext-11] [CardworksPayment.java:509] AuthIDResp (DE38):
+2023-07-03 10:30:08,328 INFO [mQPOSContext-11] [CardworksPayment.java:514] HTR (DE62): 20230703103008243219
+2023-07-03 10:30:08,328 DEBUG [mQPOSContext-11] [TransactionEnquiry.java:78] DE39: 98
+2023-07-03 10:30:08,328 DEBUG [mQPOSContext-11] [TransactionEnquiry.java:79] DE60: 0901
+2023-07-03 10:30:08,328 DEBUG [mQPOSContext-11] [TransactionEnquiry.java:83] ind: 01
+2023-07-03 10:30:08,328 INFO [mQPOSContext-11] [TransactionEnquiry.java:150] Transaction is in process
+2023-07-03 10:30:08,330 INFO [mQPOSContext-11] [TransactionEnquiry.java:206] Try again transaction enquiry after 3 seconds
+2023-07-03 10:30:11,330 DEBUG [mQPOSContext-50] [TransactionEnquiry.java:51] Send transaction enquiry to SWT. Attempt: 77
+
+
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1888] DE0: 0210
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1889] DE2: null
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1890] DE3: 280000
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1891] DE4: 000000000100
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1892] DE11: 106901
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1893] DE14: null
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1894] DE22: null
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1895] DE23: null
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1896] DE25: null
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1897] DE37: 318410106822
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1898] DE38:
+2023-07-03 10:30:14,780 INFO [mQPOSContext-50] [CardworksPayment.java:1899] DE39: 17
+2023-07-03 10:30:14,781 INFO [mQPOSContext-50] [CardworksPayment.java:1900] DE41: 20003788
+2023-07-03 10:30:14,781 INFO [mQPOSContext-50] [CardworksPayment.java:1901] DE42: null
+2023-07-03 10:30:14,781 INFO [mQPOSContext-50] [CardworksPayment.java:1902] DE54:
+2023-07-03 10:30:14,781 INFO [mQPOSContext-50] [CardworksPayment.java:1903] DE55: null
+2023-07-03 10:30:14,781 INFO [mQPOSContext-50] [CardworksPayment.java:1904] DE60: 0901
+2023-07-03 10:30:14,781 INFO [mQPOSContext-50] [CardworksPayment.java:1905] DE62: 20230703103014624971
+2023-07-03 10:30:14,792 INFO [mQPOSContext-50] [CardworksPayment.java:465] DE39: 17
+2023-07-03 10:30:14,792 ERROR [mQPOSContext-50] [CardworksPayment.java:476] Update Response: PAN is empty...
+2023-07-03 10:30:14,792 INFO [mQPOSContext-50] [CardworksPayment.java:505] RRN (DE37): 318410106822
+2023-07-03 10:30:14,793 INFO [mQPOSContext-50] [CardworksPayment.java:509] AuthIDResp (DE38):
+2023-07-03 10:30:14,793 INFO [mQPOSContext-50] [CardworksPayment.java:514] HTR (DE62): 20230703103014624971
+2023-07-03 10:30:14,793 DEBUG [mQPOSContext-50] [TransactionEnquiry.java:78] DE39: 17
+2023-07-03 10:30:14,793 DEBUG [mQPOSContext-50] [TransactionEnquiry.java:79] DE60: 0901
+2023-07-03 10:30:14,793 DEBUG [mQPOSContext-50] [TransactionEnquiry.java:83] ind: 01
+2023-07-03 10:30:14,793 INFO [mQPOSContext-50] [TransactionEnquiry.java:139] Update MB010.
+2023-07-03 10:30:21,067 DEBUG [mQPOSContext-43] [SettlementForSingleBatch.java:154] BATCH NOT FOUND ACQ=FINTECHUAT TID=90000373 BAT=552 USR=wyongkeat95@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
