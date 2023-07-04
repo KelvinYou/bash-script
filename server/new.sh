@@ -46,3 +46,63 @@ while true; do
     break
   fi
 done
+
+
+hlh_log_file="../../hlh/hlh.log"
+
+if [ ! -f "$hlh_log_file" ]; then
+  echo "Log file not found: $hlh_log_file"
+  exit 1
+fi
+
+while true; do
+  last_line=$(tail -n 1 "$hlh_log_file")
+
+  echo "last_line: $last_line"
+
+  if echo "$last_line" | grep -q "Summary"; then
+    break
+  fi
+
+  sleep 2
+done
+
+
+hlh2_log_file="../../hlh2/hlh.log"
+
+if [ ! -f "$hlh2_log_file" ]; then
+  echo "Log file not found: $hlh2_log_file"
+  exit 1
+fi
+
+while true; do
+  last_line=$(tail -n 1 "$hlh2_log_file")
+
+  echo "last_line: $last_line"
+
+  if echo "$last_line" | grep -q "Summary"; then
+    break
+  fi
+
+  sleep 2
+done
+
+
+merchant_sync_log_file="../../merchant-sync/merchant-sync.log"
+
+if [ ! -f "$merchant_sync_log_file" ]; then
+  echo "Log file not found: $merchant_sync_log_file"
+  exit 1
+fi
+
+while true; do
+  last_line=$(tail -n 1 "$merchant_sync_log_file")
+
+  echo "last_line: $last_line"
+
+  if echo "$last_line" | grep -q "Current depth: 0"; then
+    break
+  fi
+
+  sleep 2
+done

@@ -1,14 +1,14 @@
 #!/bin/bash
 
-log_file="../../merchant-sync/merchant-sync.log"
+merchant_sync_log_file="../../merchant-sync/merchant-sync.log"
 
-if [ ! -f "$log_file" ]; then
-  echo "Log file not found: $log_file"
+if [ ! -f "$merchant_sync_log_file" ]; then
+  echo "Log file not found: $merchant_sync_log_file"
   exit 1
 fi
 
 while true; do
-  last_line=$(tail -n 1 "$log_file")
+  last_line=$(tail -n 1 "$merchant_sync_log_file")
 
   echo "last_line: $last_line"
 

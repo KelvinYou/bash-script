@@ -1,14 +1,14 @@
 #!/bin/bash
 
-log_file="../../hlh2/hlh.log"
+hih2_log_file="../../hlh2/hlh.log"
 
-if [ ! -f "$log_file" ]; then
-  echo "Log file not found: $log_file"
+if [ ! -f "$hih2_log_file" ]; then
+  echo "Log file not found: $hih2_log_file"
   exit 1
 fi
 
 while true; do
-  last_line=$(tail -n 1 "$log_file")
+  last_line=$(tail -n 1 "$hih2_log_file")
 
   echo "last_line: $last_line"
 
