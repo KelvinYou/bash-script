@@ -1,6 +1,6 @@
 #!/bin/bash
 
-hlh_log_file="../../hlh/hlh.log"
+hlh_log_file="../hlh.log"
 
 if [ ! -f "$hlh_log_file" ]; then
   echo "Log file not found: $hlh_log_file"
