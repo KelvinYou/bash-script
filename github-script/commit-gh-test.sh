@@ -2,12 +2,10 @@
 
 _() {
   YEAR="1990"
-  # echo "GitHub Username: "
-  # read -r USERNAME
-  # echo "GitHub Access token: "
-  # read -r ACCESS_TOKEN
-  USERNAME=KelvinYou
-  ACCESS_TOKEN=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
+  echo "GitHub Username: "
+  read -r USERNAME
+  echo "GitHub Access token: "
+  read -r ACCESS_TOKEN
 
   C_YEAR=2021
   C_MONTH=02
